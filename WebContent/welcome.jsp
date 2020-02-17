@@ -39,6 +39,9 @@
 					<%= tagline %>
 				</h3>
 				
+				<!-- 05.방문횟수 모듈화 -->
+				<%@ include file="pagecount.jsp" %>
+				
 				<!-- 03.한글 출력 및 페이지 모듈화 -->
 				<%
 					Date day = new java.util.Date(); /* 상단 임포트 확인!!! */
@@ -65,9 +68,11 @@
 	</div>
 	</main>
 	
-	<footer class="container">
+	<!-- 04.푸터 모듈화 -->
+	<%@ include file="footer.jsp" %>
+<!-- 	<footer class="container">
 		<p>&copy; WebMarket</p>
-	</footer>
+	</footer> -->
 
 </body>
 </html>
