@@ -11,12 +11,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<!-- 02.부트스트랩 추가 -->
-	<nav class="navbar navbar-expand navbar-dark bg-dark">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="./ex06.jsp"></a>
+	<!-- 06.홈메뉴 모듈화 -->
+	<%@ include file="menu.jsp" %>
+<!-- <nav class="navbar navbar-expand navbar-dark bg-dark">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="./welcome.jsp"></a>
+			</div>
 		</div>
-	</nav>
+	</nav> -->
 
 	<%! String greeting = "웹 쇼핑몰에 오신 것을 환영합니다";
 	String tagline = "Welcome to Market!!!"; %>
