@@ -45,7 +45,7 @@
 				<!-- 05.방문횟수 모듈화 -->
 				<%@ include file="pagecount.jsp" %>
 				
-				<!-- 03.한글 출력 및 07.페이지 모듈화 -->
+				<!-- 03.한글 출력 및 07.방문시간 페이지 모듈화 -->
 				<%@ include file="clock.jsp" %>
 				<%-- <%
 					Date day = new java.util.Date(); /* 상단 임포트 확인!!! */
