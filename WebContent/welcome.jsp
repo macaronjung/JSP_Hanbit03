@@ -1,31 +1,34 @@
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- 부트스트랩 추가 -->
+	<!-- 02.부트스트랩 추가 -->
 	<link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-	<!-- 부트스트랩 추가 -->
+	<!-- 02.부트스트랩 추가 -->
 	<nav class="navbar navbar-expand navbar-dark bg-dark">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="./ex06.jsp"></a>
 		</div>
 	</nav>
 
-	<%! String greeting = "Welcome to Shop!!!";
+	<%! String greeting = "웹 쇼핑몰에 오신 것을 환영합니다";
 	String tagline = "Welcome to Market!!!"; %>
 	
-	<!-- 부트스트랩 추가 -->
+	<!-- 02.부트스트랩 추가 -->
 	<div class="jumbotron">
 		<div class="container">
-			<h1 class="display-3">
-				<%= greeting %>
-			</h1>
+			<div class="text-center">
+				<h1 class="display-3">
+					<%= greeting %>
+				</h1>
+			</div>
 		</div>
 	</div>
 	
@@ -35,6 +38,28 @@
 				<h3>
 					<%= tagline %>
 				</h3>
+				
+				<!-- 03.한글 출력 및 페이지 모듈화 -->
+				<%
+					Date day = new java.util.Date(); /* 상단 임포트 확인!!! */
+					String am_pm;
+					int hour = day.getHours();
+					int minute = day.getMinutes();
+					int second = day.getSeconds();
+					
+					/* int 값이라 0,1 두개만 나옴 */
+					if (hour / 12 == 0) {
+						am_pm = "AM";
+					} else {
+						am_pm = "PM";
+						/* hour = hour - 12; */
+					}
+					
+					String CT = hour + " : " + minute + " : " + second + " " + am_pm;
+					out.println("현재 접속 시간 : " + CT + "\n");
+					
+				%>
+				
 			</div>
 			<hr>
 	</div>
